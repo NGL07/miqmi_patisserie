@@ -42,6 +42,10 @@ h4, h5, h6, .h4, .h5, .h6 {
     padding-bottom: 6rem;
 }
 
+.hero-bg {
+    background-color: #d8c0a3;
+}
+
 .wow,
 .animated {
     animation-duration: 2s !important;
@@ -481,8 +485,6 @@ body {
 }
 /*** Footer End ***/
 
-.bg-cream {
-    background-color: #f3e6d1 !important;
-}
+
 
 
