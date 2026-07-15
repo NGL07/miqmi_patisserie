@@ -46,6 +46,35 @@ h4, h5, h6, .h4, .h5, .h6 {
     background-color: #f3ece3;
 }
 
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item img {
+    width: 92px;
+    height: 92px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: block;
+}
+
+.menu-item .menu-content {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 576px) {
+    .menu-item img {
+        width: 76px;
+        height: 76px;
+    }
+}
+
 .wow,
 .animated {
     animation-duration: 2s !important;
