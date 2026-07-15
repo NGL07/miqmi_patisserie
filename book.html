@@ -34,52 +34,53 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
 
-        <!-- JavaScript for Order Form Start -->
-    document.getElementById("orderForm").addEventListener("submit", function(e){
 
-        e.preventDefault();
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(e){
 
-        const order = document.getElementById("order").value;
-        const delivery = document.getElementById("delivery").value;
-        const date = document.getElementById("date").value;
-        const region = document.getElementById("region").value;
-        const address = document.getElementById("address").value;
-        const phone = document.getElementById("phone").value;
-        const email = document.getElementById("email").value;
+            e.preventDefault();
 
-        const message =
-    `🍰 *New Order Request*
+            const order = document.getElementById("order").value;
+            const delivery = document.getElementById("delivery").value;
+            const date = document.getElementById("date").value;
+            const region = document.getElementById("region").value;
+            const address = document.getElementById("address").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
 
-    🧁 Order:
-    ${order}
+            const message =
+        `🍰 *New Order Request*
 
-    🚚 Delivery:
-    ${delivery}
+        🧁 Order:
+        ${order}
 
-    📅 Date:
-    ${date}
+        🚚 Delivery:
+        ${delivery}
 
-    📍 Region:
-    ${region}
+        📅 Date:
+        ${date}
 
-    🏠 Address:
-    ${address}
+        📍 Region:
+        ${region}
 
-    📞 Phone:
-    ${phone}
+        🏠 Address:
+        ${address}
 
-    📧 Email:
-    ${email}`;
+        📞 Phone:
+        ${phone}
 
-        window.open(
-            "https://wa.me/905323032201?text=" +
-            encodeURIComponent(message),
-            "_blank"
-        );
+        📧 Email:
+        ${email}`;
 
-    });
+            window.open(
+                "https://wa.me/905323032201?text=" +
+                encodeURIComponent(message),
+                "_blank"
+            );
+
+        });
         <!-- JavaScript for Order Form End -->
-
+    </script>
 
 
     <body>
@@ -176,16 +177,14 @@
                             </div>
                             <form id="orderForm">
                             <div class="row g-4">
-                            </div>
-                            </form>   
                                 <div class="col-lg-4 col-md-6">
-                                    <input id="order" type="text" class="form-control border-primary p-2" placeholder="What Do You Want To Order?">
+                                    <textarea id="order" class="form-control border-primary p-2" rows="5" placeholder="Describe your order, quantities, flavors, size, special requests..."></textarea>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
                                     <select id="delivery" class="form-select border-primary p-2" aria-label="Default select example">
                                         <option selected>Delivery/Pick-Up</option>
-                                        <option value="1">Delivery</option>
-                                        <option value="2">Pick-Up</option>
+                                        <option value="Delivery">Delivery</option>
+                                        <option value="Pick-Up">Pick-Up</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
@@ -194,24 +193,24 @@
                                 <div class="col-lg-4 col-md-6">
                                     <select id="region" class="form-select border-primary p-2" aria-label="Default select example">
                                         <option selected>Select Your Region</option>
-                                        <option value="1">Uskumruköy</option>
-                                        <option value="2">Zekeriyaköy</option>
-                                        <option value="3">Ayazağa</option>
-                                        <option value="4">Bahçeköy</option>
-                                        <option value="5">Demirciköy</option>
-                                        <option value="6">Etiler</option>
-                                        <option value="7">Ferahevler</option>
-                                        <option value="8">Gümüşdere</option>
-                                        <option value="9">İstinye</option>
-                                        <option value="10">Kireçburnu</option>
-                                        <option value="11">Kısırkaya</option>
-                                        <option value="12">Kumköy</option>
-                                        <option value="13">Maden</option>
-                                        <option value="14">Maslak</option>
-                                        <option value="15">Rumelifeneri</option>
-                                        <option value="16">Sarıyer Merkez</option>
-                                        <option value="17">Tarabya</option>                                        
-                                        <option value="18">Yeniköy</option> 
+                                        <option value="Uskumruköy">Uskumruköy</option>
+                                        <option value="Zekeriyaköy">Zekeriyaköy</option>
+                                        <option value="Ayazağa">Ayazağa</option>
+                                        <option value="Bahçeköy">Bahçeköy</option>
+                                        <option value="Demirciköy">Demirciköy</option>
+                                        <option value="Etiler">Etiler</option>
+                                        <option value="Ferahevler">Ferahevler</option>
+                                        <option value="Gümüşdere">Gümüşdere</option>
+                                        <option value="İstinye">İstinye</option>
+                                        <option value="Kireçburnu">Kireçburnu</option>
+                                        <option value="Kısırkaya">Kısırkaya</option>
+                                        <option value="Kumköy">Kumköy</option>
+                                        <option value="Maden">Maden</option>
+                                        <option value="Maslak">Maslak</option>
+                                        <option value="Rumelifeneri">Rumelifeneri</option>
+                                        <option value="Sarıyer Merkez">Sarıyer Merkez</option>
+                                        <option value="Tarabya">Tarabya</option>                                        
+                                        <option value="Yeniköy">Yeniköy</option> 
                                     </select>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
@@ -227,6 +226,7 @@
                                     <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Send Order</button>
                                 </div>
                             </div>
+                            </form>   
                         </div>
                     </div>
                     <div class="col-1">
@@ -322,6 +322,54 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const order = document.getElementById("order").value;
+            const delivery = document.getElementById("delivery").value;
+            const date = document.getElementById("date").value;
+            const region = document.getElementById("region").value;
+            const address = document.getElementById("address").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            const message =
+        `🍰 *New Order Request*
+
+        🧁 Order:
+        ${order}
+
+        🚚 Delivery:
+        ${delivery}
+
+        📅 Date:
+        ${date}
+
+        📍 Region:
+        ${region}
+
+        🏠 Address:
+        ${address}
+
+        📞 Phone:
+        ${phone}
+
+        📧 Email:
+        ${email}`;
+
+            window.open(
+                "https://wa.me/905323032201?text=" +
+                encodeURIComponent(message),
+                "_blank"
+            );
+
+        });
+        <!-- JavaScript for Order Form End -->
+    </script>
+
     </body>
 
 </html>
